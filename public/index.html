@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>JEE Smart Notes AI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brandmark">✦</div>
+    <div><div class="brand">JEE Smart Notes <span>AI</span></div><div class="subbrand">Your chapter → a complete revision pack</div></div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">AI STUDY ASSISTANT</div>
+      <h1>One chapter name.<br><em>Your whole revision plan.</em></h1>
+      <p>Generate concise notes, mind maps, formula sheets, solving tricks, tricky questions and PYQ research in one place.</p>
+    </section>
+
+    <section class="panel">
+      <form id="chapter-form">
+        <label for="chapter">Chapter name</label>
+        <input id="chapter" name="chapter" placeholder="e.g. Electrostatics" required maxlength="120">
+        <div class="fields">
+          <div><label for="subject">Subject</label>
+            <select id="subject"><option>Auto-detect</option><option>Physics</option><option>Chemistry</option><option>Mathematics</option></select>
+          </div>
+          <div><label for="exam">Exam target</label>
+            <select id="exam"><option>JEE Main + Advanced</option><option>JEE Main</option><option>JEE Advanced</option><option>NEET</option><option>Class 11/12 boards</option></select>
+          </div>
+          <div><label for="language">Notes language</label>
+            <select id="language"><option>Hindi + English</option><option>English</option><option>Hindi</option></select>
+          </div>
+        </div>
+        <button id="generate" type="submit"><span>✦</span> Generate my study pack</button>
+        <p class="small">Internet research and AI generation require a configured API key. Check official sources for exam-critical details.</p>
+      </form>
+    </section>
+
+    <section class="features">
+      <div class="feature"><b>01</b><strong>Short notes</strong><span>Concepts made revision-friendly</span></div>
+      <div class="feature"><b>02</b><strong>Mind map</strong><span>See how concepts connect</span></div>
+      <div class="feature"><b>03</b><strong>Solving tricks</strong><span>Methods, traps and conditions</span></div>
+      <div class="feature"><b>04</b><strong>PYQs + practice</strong><span>Source-aware questions and answers</span></div>
+    </section>
+
+    <section id="result-panel" class="panel result-panel hidden">
+      <div class="result-head">
+        <div><div class="eyebrow">YOUR STUDY PACK</div><h2 id="result-title">Generated notes</h2></div>
+        <div class="actions"><button id="copy" class="secondary" type="button">Copy</button><button id="print" class="secondary" type="button">Save PDF</button></div>
+      </div>
+      <div id="status" role="status" class="status"></div>
+      <article id="result" class="markdown"></article>
+    </section>
+    <footer>Made for focused revision • AI content should be checked against trusted textbooks and official exam material.</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
